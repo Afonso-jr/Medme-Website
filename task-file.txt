@@ -1,6 +1,5 @@
------------------------------------- Nav -------------------------------------
+------------------------------------ Footer -------------------------------------
 
     To do list:
 
---> Add links to html tags
---> Atetion on blur efect
+--> Use js to "break" "© 2024 MedMe Saúde, <br> todos os direitos reservados."
