@@ -1,0 +1,6 @@
+------------------------------------ Nav -------------------------------------
+
+    To do list:
+
+--> Add links to html tags
+--> Atetion on blur efect
