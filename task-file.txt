@@ -1,5 +1,3 @@
 ------------------------------------ Footer -------------------------------------
 
     To do list:
-
---> Use js to "break" "© 2024 MedMe Saúde, <br> todos os direitos reservados."
