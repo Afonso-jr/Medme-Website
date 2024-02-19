@@ -7,7 +7,7 @@
 }
 
 :root {
-    --primary-color: rgba(31, 71, 153, 1);
+    --primary-color: rgba(20, 48, 102, 1);
     --nav-bar-link-color: rgb(41, 150, 204, 1);
     --nav-bar-mobile-li: rgb(255, 255, 255);
     --nav-bar-sub-menu-background: rgba(249, 250, 251, 1);
@@ -16,9 +16,10 @@
     --nav-bar-submenu-border: rgb(234, 236, 240);
     --nav-bar-submenu-shadow: rgba(0, 0, 0, 0.1);
     --nav-bar-button-background: rgba(178, 227, 254, 1);
+    --nav-bar-button-text: rgba(31, 71, 153, 1);
     --nav-bar-button-hover: rgba(229, 244, 254, 1);
 
-    --nav-height: 8rem;
+    --nav-height: 8rem; 
 
     font-size: 62.5%; /* 1 rem = 10px*/
 }
@@ -121,7 +122,7 @@ header {
 .contact-button button {
     border: 0.1rem;
     background-color: var(--nav-bar-button-background);
-    color: var(--primary-color);
+    color: var(--nav-bar-button-text);
     cursor: pointer;
     border-radius: 5rem;
     padding: 1rem 1.6rem;
@@ -138,7 +139,7 @@ header {
 .contact-button button a {
     text-decoration: none;
     font-family: 'Inter';
-    color: var(--primary-color);    
+    color: var(--nav-bar-button-text);    
     font-size: 1.4rem;
 }
 
@@ -474,9 +475,9 @@ li {
         position: absolute;
         font-size: 1.2rem;
         top: 100%;
-        z-index: 101;
         left: 90%;
         transform: translateX(-60%);
+        z-index: 101;
         width: 20rem;
     }
  
@@ -674,4 +675,15 @@ li {
     a .nav-bar-p {
         font-size: 1rem;
     }
+}
+
+section {
+    margin-top: var(--nav-height);
+    background-color: var(--test);
+}
+
+section div {
+    margin-top: var(--nav-height);
+    padding: 5rem;
+    background-color: var(--test);
 }
