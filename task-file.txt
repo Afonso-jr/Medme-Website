@@ -1,6 +1,25 @@
+------------------------------------ Body -------------------------------------
+
+    To do list:
+
+--> See how SVG can be "downsize" to fit mobile screen
+
 ------------------------------------ Nav -------------------------------------
 
     To do list:
 
 --> Add links to html tags
---> Atetion on blur efect
+--> Add link to logo
+
+------------------------------------ Footer -------------------------------------
+
+    To do list:
+
+--> Validate links layout on tablet/ mobile area
+
+------------------------------------ Home -------------------------------------
+
+    To do list:
+    
+--> Understand how svg filter "blur" works on Figma but is different on web-page
+--> Put a warning that home img need to be "height: 756px"
