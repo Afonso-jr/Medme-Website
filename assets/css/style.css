@@ -8,16 +8,21 @@
 
 :root {
     --primary-color: rgba(20, 48, 102, 1);
+    --webpage-backgound: rgba(255, 255, 255, 1);
+    --webpage-title-color: rgba(31, 71, 153, 1);
+    --webpage-p-color: rgba(71, 84, 103, 1);
+    --webpage-p-color-hover: rgba(52, 64, 84, 1);
     --nav-bar-link-color: rgb(41, 150, 204, 1);
     --nav-bar-mobile-li: rgb(255, 255, 255);
     --nav-bar-sub-menu-background: rgba(249, 250, 251, 1);
-    --nav-bar-h1: rgba(71, 84, 103, 1);
-    --nav-bar-h1-hover: rgba(52, 64, 84, 1);
     --nav-bar-submenu-border: rgb(234, 236, 240);
     --nav-bar-submenu-shadow: rgba(0, 0, 0, 0.1);
     --nav-bar-button-background: rgba(178, 227, 254, 1);
-    --nav-bar-button-text: rgba(31, 71, 153, 1);
+    --nav-bar-button-border-color: rgba(178, 227, 254, 1);
     --nav-bar-button-hover: rgba(229, 244, 254, 1);
+    --nav-bar-button-hover-body: rgba(171, 239, 198, 1);
+    --home-button-color: rgba(41, 150, 204, 1);    
+    --home-button-color-hover: rgba(242, 250, 255, 1);
     --footer-backgroud: rgba(12, 17, 29, 1);
     --footer-h3: rgba(245, 245, 246, 1);
     --footer-link: rgba(206, 207, 210, 1);
@@ -90,10 +95,11 @@ header {
 .nav-item {
     font-weight: 500;
     line-height: 2rem;
+    font-size: 1.4rem;
 }
 
 .nav-item span {
-    color: var(--nav-bar-h1);
+    color: var(--webpage-p-color);
     cursor: pointer;
 }
 
@@ -101,12 +107,11 @@ header {
 .nav-item span:hover,
 .nav-item span svg path:hover,
 #close-solution-svg path:hover {
-    color: var(--nav-bar-h1-hover);
-    stroke: var(--nav-bar-h1-hover);
+    color: var(--webpage-p-color-hover);
+    stroke: var(--webpage-p-color-hover);
 }
 
 .nav-list {
-    margin-right: 1rem;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -121,15 +126,15 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: var(--nav-bar-h1);
+    color: var(--webpage-p-color);
     font-weight: 500;
     line-height: 2rem;
 }
 
 .contact-button button {
-    border: 0.1rem;
+    border: 0.1rem solid var(--nav-bar-button-border-color);
     background-color: var(--nav-bar-button-background);
-    color: var(--nav-bar-button-text);
+    color: var(--webpage-title-color);
     cursor: pointer;
     border-radius: 5rem;
     padding: 1rem 1.6rem;
@@ -145,7 +150,7 @@ header {
 .contact-button button a {
     text-decoration: none;
     font-family: 'Inter';
-    color: var(--nav-bar-button-text);    
+    color: var(--webpage-title-color);    
     font-size: 1.4rem;
 }
 
@@ -270,7 +275,7 @@ header {
     font-size: 1.4rem;
     line-height: 2rem;
     text-align: justify;
-    color: var(--nav-bar-h1);
+    color: var(--webpage-p-color);
     white-space: wrap;
 }
 
@@ -308,11 +313,145 @@ li {
     display: none;
 }
 
+/* ============================================= Home ============================================= */
+
+#home .wrapper {
+    margin-top: 8rem;
+    padding: 3.2rem 6.4rem;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+    overflow: hidden;
+}
+
+.home-content {
+    display: flex;
+    flex-grow: 0;
+    gap: 4.8rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-subheading {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    border: 0.1rem solid var(--nav-bar-button-border-color);
+    border-radius: 5rem;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    background-color: var(--nav-bar-button-hover);
+    color: var(--webpage-title-color);
+}
+
+.home-subheading span {
+    padding: 0.2rem 1rem;
+    background-color: var(--webpage-backgound);
+    border-radius: 5rem;
+    border: 0.1rem solid var(--nav-bar-button-border-color);
+    margin-right: .8rem;
+}
+
+.home-subheading:hover {
+    background-color: var(--nav-bar-button-hover-body);
+}
+
+.home-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.home-info h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 7.2rem;
+    color: var(--webpage-title-color);   
+    text-align: start;
+}
+
+.home-info p {
+    color: var(--webpage-p-color);   
+    text-align: start;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 400;
+    width: 80%;
+}
+
+.home-buttons {
+    display: flex;
+    align-self: flex-start;
+    gap: 1.6rem ;
+}
+
+.home-buttons button {
+    cursor: pointer;
+    padding: 1.2rem 1.8rem;
+    border-radius: 5rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: 0.1rem solid var(--home-button-color);
+    background-color: var(--webpage-backgound);
+}
+
+.home-buttons button:hover {
+    background-color: var(--home-button-color-hover);
+}
+
+.home-buttons button a {
+    text-decoration: none;
+    font-family: 'Inter';
+    color: var(--home-button-color);
+    font-size: 1.4rem;
+}
+
+.home-buttons button:nth-child(2) a {
+    color: var(--webpage-title-color);
+}
+
+.home-buttons button:nth-child(2) {
+    border: 0.1rem solid var(--nav-bar-button-border-color);
+    background-color: var(--nav-bar-button-background);
+}
+
+.home-buttons button:nth-child(2):hover {
+    background-color: var(--nav-bar-button-hover);
+}
+
+.home-img-display {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.home-img-display img {
+    border-radius: 2.4rem;
+    width: 100%;
+    height: 100%;
+}
+
+.home-img-display svg {
+    position: absolute;
+    width: 95%;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+}
+
 /* ============================================= Footer ============================================= */
 
 footer {
     width: 100%;
-    margin-top: 60rem;
     background-color: var(--footer-backgroud);
 }
 
@@ -590,6 +729,56 @@ footer .wrapper {
         font-size: 1.2rem;  
     }
 
+    /* =========== home =========== */
+  
+    #home .wrapper {
+        gap: 4rem;
+        padding: 2rem 2.4rem;
+        overflow: hidden;
+    }
+    
+    .home-content {
+        gap: 2.8rem;
+    }
+    
+    .home-subheading {
+        gap: 0.2rem;
+        font-size: 1rem;
+    }
+
+    .home-info {
+        gap: 1.5rem;
+    }
+
+    .home-content .home-info h1 {
+        font-size: 3rem;
+        line-height: 4rem; 
+    }
+   
+    .home-content .home-info p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        width: 75%;
+    }   
+
+    .home-buttons {
+        gap: 1rem ;
+    }
+
+    .home-buttons button {
+        padding: 0.7rem 1.3rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .home-buttons button a {
+        font-size: 1rem;
+    }
+    
+    .home-img-display svg {
+        bottom: -10rem;
+    }
+    
     /* =========== Footer =========== */
 
     #footer_content {
@@ -784,6 +973,77 @@ footer .wrapper {
     div .nav-bar-p,
     a .nav-bar-p {
         font-size: 1rem;
+    }
+
+    /* =========== home =========== */
+
+    #home .wrapper {
+        padding: 2rem 2.4rem; 
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+    }
+
+    .home-content {
+        gap: 3rem;
+    }
+
+    button.home-subheading {
+        gap: 0.2rem;
+        border-radius: 1.7rem;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        padding: 0.4rem;
+    }
+
+    .home-subheading svg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    button.home-subheading span {
+        padding-inline: 1rem;
+        border-radius: 1.5rem;
+        margin-right: 0.8rem;
+    }
+
+    .home-subheading span {
+        background-color: var(--webpage-backgound);
+        border-radius: 5rem;
+        border: 0.1rem solid var(--nav-bar-button-border-color);
+        margin-right: .8rem;
+    }
+
+    .home-info {
+        gap: 1rem;
+    }
+
+    .home-content .home-info h1 {
+        font-size: 2.5rem;
+        line-height: 3rem; 
+    }
+    
+    .home-content .home-info p {
+        font-size: 1rem;
+        line-height: 2rem;
+    } 
+
+    .home-buttons {
+        gap: 0.5rem ;
+    }
+
+    .home-buttons button {
+        padding: 0.7rem 1rem;
+        line-height: 1rem;
+        font-size: 1rem;
+    }
+
+    .home-buttons button a {
+        font-size: 0.8rem;
+    }
+    
+    .home-img-display svg {
+        bottom: -10rem;
     }
 
     /* =========== Footer =========== */
