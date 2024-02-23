@@ -39,13 +39,13 @@ html {
     scroll-behavior: smooth;
 }
 
-body {    
-    font-family: 'Inter';
-    font-size: 1.6rem;
-    text-align: center;  
-    background: url('/assets/img/body-background.svg') no-repeat center center fixed;
-    background-size: cover;
-}
+    body {    
+        font-family: 'Inter';
+        font-size: 1.6rem;
+        text-align: center;  
+        background: url('../img/body-background.svg') no-repeat center center fixed;
+        background-size: cover;
+    }
 
 .wrapper {
     width: min(144rem, 100%); 
@@ -545,7 +545,7 @@ footer .wrapper {
     /* =========== General =========== */
 
     body {  
-        background: url('./assets/img/body-background.svg') no-repeat center center fixed;
+        background: url('../img/body-background.svg') no-repeat center center fixed;
         background-size: cover;
     }
 
@@ -799,7 +799,7 @@ footer .wrapper {
     /* =========== General =========== */
 
     body {
-        background: url('./assets/img/body-background.svg') no-repeat center center fixed;
+        background: url('../img/body-background.svg') no-repeat center center fixed;
         background-size: cover;
     }
     
@@ -981,7 +981,7 @@ footer .wrapper {
     }
 
     .mobile-menu .contact-button {
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
     /* =========== home =========== */
