@@ -1225,8 +1225,9 @@ footer .wrapper {
         font-size: 1.4rem;
     }
 
-    div.card p {
+    .cards div.card p {
         font-size: 1.2rem;
+        line-height: 1.5rem;
     }
     
     /* =========== Footer =========== */
