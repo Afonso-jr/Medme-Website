@@ -8,7 +8,7 @@
 
 :root {
     --primary-color: rgba(20, 48, 102, 1);
-    --webpage-backgound: rgba(255, 255, 255, 1);
+    --webpage-background: rgba(255, 255, 255, 1);
     --webpage-title-color: rgba(31, 71, 153, 1);
     --webpage-p-color: rgba(71, 84, 103, 1);
     --webpage-p-color-hover: rgba(52, 64, 84, 1);
@@ -23,6 +23,10 @@
     --nav-bar-button-hover-body: rgba(171, 239, 198, 1);
     --home-button-color: rgba(41, 150, 204, 1);    
     --home-button-color-hover: rgba(242, 250, 255, 1);
+    --numeric-span-color: rgba(0, 134, 201, 1);
+    --numeric-span-background-color : rgba(240, 249, 255, 1);
+    --numeric-border-color: rgba(185, 230, 254, 1);
+    --numeric-cards-background: rgba(255, 255, 255, 0.3);
     --footer-backgroud: rgba(12, 17, 29, 1);
     --footer-h3: rgba(245, 245, 246, 1);
     --footer-link: rgba(206, 207, 210, 1);
@@ -353,7 +357,7 @@ li {
 
 .home-subheading span {
     padding: 0.2rem 1rem;
-    background-color: var(--webpage-backgound);
+    background-color: var(--webpage-background);
     border-radius: 5rem;
     border: 0.1rem solid var(--nav-bar-button-border-color);
     margin-right: .8rem;
@@ -400,7 +404,7 @@ li {
     font-size: 1.4rem;
     font-weight: 500;
     border: 0.1rem solid var(--home-button-color);
-    background-color: var(--webpage-backgound);
+    background-color: var(--webpage-background);
 }
 
 .home-buttons button:hover {
@@ -435,17 +439,93 @@ li {
 
 .home-img-display img {
     border-radius: 2.4rem;
-    width: 100%;
+    width: 95%;
     height: 100%;
 }
 
 .home-img-display svg {
     position: absolute;
-    width: 95%;
-    bottom: -3rem;
+    bottom: -5rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 110%;
+    width: 120%;
+}
+
+/* ========================================== Numeric Data ========================================== */
+
+#numeric .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    padding: 3.2rem;
+}
+
+.numeric-title span {
+    color: var(--numeric-span-color);
+    padding: 0.4rem 1.2rem;
+    border: 0.1rem solid var(--numeric-border-color);
+    border-radius: 5rem;
+    background-color: var(--numeric-span-background-color);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.numeric-title h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-block: 2rem;
+    color: var(--webpage-title-color);
+    margin-inline: 6rem;
+}
+
+.numeric-title p {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--webpage-p-color);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    justify-content: center;
+    gap: 3.2rem;
+    border-radius: 2.4rem;
+    background-color: var(--primary-color);
+    padding: 6.4rem;
+    margin-inline: 3.2rem;
+    margin-inline: auto;
+    max-width: 100%;
+} 
+
+.card {
+    background-color: var(--numeric-cards-background);
+    border-radius: 1.6rem;
+    border: 0.1rem solid var(--numeric-cards-background);
+    color: var(--webpage-background);
+    padding: 3.2rem 2.4rem;
+    width: 34.2rem;
+}
+
+.card h1 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    line-height: 7.2rem;
+    font-size: 6rem;
+}
+
+.card h5 {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    font-size: 1.6rem;
+}
+
+.card p {
+    font-weight: 400;
+    line-height: 2.4rem;
+    font-size: 1.6rem;
 }
 
 /* ============================================= Footer ============================================= */
@@ -781,7 +861,53 @@ footer .wrapper {
     .home-img-display svg {
         bottom: -10rem;
     }
+
+    /* =========== Numeric Data =========== */
     
+    #numeric div.wrapper {
+        gap: 4.4rem;
+        padding: 2.4rem;
+    }
+
+    div.numeric-title span {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    div.numeric-title h1 {
+        margin-block: 1.5rem;
+        font-size: 3rem;
+    }
+
+    div.numeric-title p {
+        font-size: 1.8rem;
+    }
+    
+    div.cards {
+        gap: 1.5rem;
+        padding: 2rem;
+    } 
+
+    .card {
+        padding: 2.8rem 2.2rem;
+        width: 28rem;
+    }
+    
+    div.card h1 {
+        margin-bottom: 1.5rem;
+        line-height: 6rem;
+        font-size: 5rem;
+    }
+
+    div.card h5 {
+        font-size: 1.4rem;
+    }
+
+    div.card p {
+        font-size: 1.2rem;
+    }
+
     /* =========== Footer =========== */
 
     #footer_content {
@@ -981,7 +1107,7 @@ footer .wrapper {
     }
 
     .mobile-menu .contact-button {
-        margin-bottom: 5rem;
+        margin-bottom: 7rem;
     }
 
     /* =========== home =========== */
@@ -1017,7 +1143,7 @@ footer .wrapper {
     }
 
     .home-subheading span {
-        background-color: var(--webpage-backgound);
+        background-color: var(--webpage-background);
         border-radius: 5rem;
         border: 0.1rem solid var(--nav-bar-button-border-color);
         margin-right: .8rem;
@@ -1052,9 +1178,57 @@ footer .wrapper {
     }
     
     .home-img-display svg {
-        bottom: -10rem;
+        bottom: -11rem;
+        max-width: 110%;
     }
 
+    /* =========== Numeric Data =========== */
+
+    #numeric div.wrapper {
+        gap: 3rem;
+        padding: 2.4rem;
+    }
+
+    div.numeric-title span {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    div.numeric-title h1 {
+        margin-block: 1.2rem;
+        font-size: 1.8rem;
+        margin-inline: 0;
+    }
+
+    div.numeric-title p {
+        font-size: 1.2rem;
+    }
+    
+    div.cards {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    } 
+
+    .card {
+        padding: 1.5rem 1rem;
+        width: 100%;
+    }
+    
+    div.card h1 {
+        margin-bottom: 1.5rem;
+        line-height: 3rem;
+        font-size: 3rem;
+    }
+
+    div.card h5 {
+        font-size: 1.4rem;
+    }
+
+    div.card p {
+        font-size: 1.2rem;
+    }
+    
     /* =========== Footer =========== */
 
     #footer_content {
