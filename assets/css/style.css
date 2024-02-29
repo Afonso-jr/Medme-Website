@@ -498,7 +498,6 @@ li {
     border-radius: 2.4rem;
     background-color: var(--primary-color);
     padding: 6.4rem;
-    margin-inline: 3.2rem;
     margin-inline: auto;
     max-width: 100%;
 } 
@@ -629,6 +628,60 @@ li {
     border-bottom-right-radius: 50%;
     border-top-left-radius: initial;
     border-bottom-left-radius: initial;
+}
+
+/* =============================================== CTA ============================================== */
+
+#cta .wrapper {
+    padding: 3.2rem 6.4rem 3.2rem 6.4rem;
+}
+
+.cta-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 6.4rem;
+    border-radius: 2.4rem;
+}
+
+.cta-text h2 {
+    color: var(--webpage-background);
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+}
+
+.cta-text p {
+    color: var(--nav-bar-button-background);
+    text-align: left;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.cta-button {
+    padding: 1.2rem 1.8rem;
+    height: 100%;
+    border: 0.1rem solid var(--nav-bar-button-background);
+    background-color: var(--nav-bar-button-background);
+    color: var(--webpage-title-color);
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
+.cta-button a {
+    text-decoration: none;
+    font-family: 'Inter';
+    color: var(--webpage-title-color);    
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background-color: var(--nav-bar-button-hover);
 }
 
 /* ============================================= Footer ============================================= */
@@ -1065,6 +1118,38 @@ footer .wrapper {
     .about-solutions img {
         height: 48.2rem;
     }
+
+    /* =========== CTA =========== */
+    
+    #cta .wrapper {
+        padding: 3.2rem 6.4rem 3.2rem 6.4rem;
+    }
+    
+    .cta-info {
+        gap: 2rem;
+        padding: 3rem;
+    }
+
+    .cta-text h2 {
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .cta-text p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    
+    .cta-button {
+        line-height: 1.6rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .cta-button a {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }  
     
     /* =========== Footer =========== */
 
@@ -1478,6 +1563,40 @@ footer .wrapper {
     .about-solutions img {
         display: none;
     }
+
+    /* =========== CTA =========== */
+
+    #cta .wrapper {
+        padding: 1.5rem 3.2rem 1.5rem 3.2rem;
+    }
+
+    .cta-info {
+        flex-direction: column;
+        gap: 6rem;
+        padding: 3rem;
+    }
+    
+    .cta-text h2 {
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .cta-text p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+       
+    .cta-button {
+        margin-inline: auto;
+        max-width: 100%;
+        padding: 1rem 1rem;
+    }
+    
+    .cta-button a {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }  
     
     /* =========== Footer =========== */
 
