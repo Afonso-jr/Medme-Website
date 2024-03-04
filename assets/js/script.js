@@ -137,3 +137,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Change border color of select element on Features
+
+document.addEventListener('DOMContentLoaded', function() {
+    const featureInfos = document.querySelectorAll('.features-info');
+    featureInfos.forEach(function(info) {
+        info.addEventListener('click', function() {
+            featureInfos.forEach(function(otherInfo) {
+                otherInfo.classList.remove('features-selected');
+            });
+            this.classList.add('features-selected');
+        });
+    });
+});

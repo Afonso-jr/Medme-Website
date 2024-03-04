@@ -11,13 +11,13 @@
 --> Add links to html tags
 --> Add link to logo
 
------------------------------------ Footer -----------------------------------
+------------------------------------ Footer -----------------------------------
 
     To do list:
 
 --> Validate links layout on tablet/ mobile area
 
------------------------------------- Home ------------------------------------
+------------------------------------ Home -------------------------------------
 
     To do list:
     
@@ -25,7 +25,7 @@
 --> Put a warning that home img need to be "height: 756px" for Desktop
 --> Understand the desire height for img on tablet/ mobile area 
 
--------------------------------- Numeric Data --------------------------------
+------------------------------------ Numeric Data -----------------------------
 
     To do list:
     
@@ -37,3 +37,14 @@
     
 --> Put a warning that home img need to be "height: 682px"
 --> Understand the desire height for img on tablet/ mobile area 
+
+------------------------------------ CTA --------------------------------------
+
+  To do list:
+
+------------------------------------ Features ---------------------------------
+
+  To do list:
+
+--> Verify to "receive" the img with macbook on it
+--> An idea is to have 3 diferrent img for each solution 
