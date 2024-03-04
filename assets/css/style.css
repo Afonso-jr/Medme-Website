@@ -694,6 +694,7 @@ li {
 #features .wrapper{
     padding-block: 6.4rem;
     overflow: hidden;
+    outline: none;
 }
 
 .features-title h1 {
@@ -718,12 +719,12 @@ li {
     align-items: center;
     padding-left: 6.4rem;
     gap: 6.4rem;
+    outline: none;
 }
 
 .features-infos {
     padding: 3.2rem;
-    text-align: start;
-    cursor: pointer;
+    text-align: start;  
     outline: none;
 }
 
@@ -736,6 +737,7 @@ div.features-info {
 
 div.features-selected {
     border-left: 0.4rem solid var(--home-button-color);
+    outline: none;
 }
 
 .features-info h1 {
@@ -1255,11 +1257,13 @@ footer .wrapper {
     .features-solutions {
         padding-left: 5rem;
         gap: 5rem;
+        outline: none;
     }
 
     .features-infos {
         padding: 2rem;
         text-align: start;
+        outline: none;
     }
 
     .features-info h1 {
@@ -1735,6 +1739,7 @@ footer .wrapper {
         align-items: center;
         padding-inline: 2rem;
         margin-bottom: 3.2rem;
+        outline: none;
     }
 
     #features .wrapper{
@@ -1758,6 +1763,7 @@ footer .wrapper {
     .features-infos {
         text-align: start;
         padding: 0rem;
+        outline: none;
     }
 
     .features-info h1 {
