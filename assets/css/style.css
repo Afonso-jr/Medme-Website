@@ -845,6 +845,79 @@ div.features-selected {
     line-height: 2.4rem;
 }
 
+/* ==================================== Inernal testimonial ====================================== */
+
+#inernal-testimonial .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap:6.4rem;
+    padding: 6.4rem 3.2rem;
+}
+
+.inernal-testimonial-title {
+    padding-inline: 3.2rem;
+}
+
+.inernal-testimonial-title h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 4.4rem;
+    color: var(--webpage-title-color);
+    margin-bottom: 2rem;
+}
+
+.inernal-testimonial-title p {
+    color: var(--webpage-p-color);
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-inline: auto;
+    max-width: 100%;
+}
+
+.internal-testimonial-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 3.2rem;
+}
+
+.internal-testimonial-card {
+    background-color: var(--nav-bar-sub-menu-background);
+    text-align: left;
+    padding: 2.4rem;
+}
+
+.internal-testimonial-card h1 {
+    color: var(--webpage-subtitle-color);
+    margin-block: 6.4rem 0.8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.internal-testimonial-card h2 {
+    color: var(--webpage-p-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.internal-testimonial-card h3 {
+    color: var(--webpage-p-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.internal-testimonial-card p {
+    color: var(--webpage-p-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
 /* =========================================== Footer =========================================== */
 
 footer {
@@ -1322,8 +1395,8 @@ footer .wrapper {
 
     .features-title p {
         font-size: 1.8rem;
-        margin-bottom: 12.8rem;
-        width: 69rem;
+        margin-bottom: 8rem;
+        width: 60rem;
     }
 
     .features-solutions {
@@ -1404,6 +1477,59 @@ footer .wrapper {
     .testimonial-text p {
         font-size: 1.4rem;
         line-height: 2rem;
+    }
+
+    /* ===== Inernal testimonial ===== */
+
+    #inernal-testimonial .wrapper {
+        gap: 4rem;
+        padding: 4rem 3.2rem;
+    }
+    
+    .inernal-testimonial-title {
+        padding-inline: 2.5rem;
+    }    
+
+    .inernal-testimonial-title h1 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .inernal-testimonial-title p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .internal-testimonial-cards {
+        padding-inline: 2rem;
+    }
+
+    .internal-testimonial-card {
+        padding: 2rem;
+    }
+
+    .internal-testimonial-card h1 {
+        margin-block: 4rem 0.8rem;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .internal-testimonial-card h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .internal-testimonial-card h3 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .internal-testimonial-card p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
     }
 
     /* =========== Footer =========== */
@@ -1991,7 +2117,59 @@ footer .wrapper {
         font-size: 1rem;
         line-height: 1.5rem;
     }
+    
+    /* ===== Inernal testimonial=====*/
 
+    #inernal-testimonial .wrapper {
+        gap: 3rem;
+        padding: 2rem 2rem;
+    }
+
+    .inernal-testimonial-title {
+        padding-inline: 1rem;
+    } 
+
+    .inernal-testimonial-title h1 {
+        font-size: 1.8rem;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .inernal-testimonial-title p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .internal-testimonial-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .internal-testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    .internal-testimonial-card h1 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .internal-testimonial-card h2 {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    
+    .internal-testimonial-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    
+    .internal-testimonial-card p {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    
     /* =========== Footer =========== */
 
     #footer_content {
