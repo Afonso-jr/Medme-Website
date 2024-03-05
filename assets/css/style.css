@@ -1,4 +1,4 @@
-/* ============================================= General ============================================= */
+/* =========================================== General =========================================== */
 
 * {
     padding: 0;
@@ -59,7 +59,7 @@ html {
     margin-inline: auto;  
 }
 
-/* ============================================= Navigation Header ============================================= */
+/* ======================================= Navigation Header ===================================== */
 
 header {
     width: 100vw;
@@ -199,7 +199,7 @@ header {
     cursor: pointer;
 }
 
-/* ============================================= Nav Submenu ============================================= */
+/* ========================================= Nav Submenu ========================================= */
 
 .submenusolucoes {
     position: absolute;
@@ -458,7 +458,7 @@ li {
     width: 120%;
 }
 
-/* ========================================== Numeric Data ========================================== */
+/* ======================================== Numeric Data ======================================== */
 
 #numeric .wrapper {
     display: flex;
@@ -534,7 +534,7 @@ li {
     font-size: 1.6rem;
 }
 
-/* ============================================= About ============================================= */
+/* =========================================== About =========================================== */
 
 #about .wrapper{
     margin-block: 3.2rem;
@@ -635,7 +635,7 @@ li {
     border-bottom-left-radius: initial;
 }
 
-/* =============================================== CTA ============================================== */
+/* =========================================== CTA =========================================== */
 
 #cta .wrapper {
     padding: 3.2rem 6.4rem 3.2rem 6.4rem;
@@ -689,7 +689,7 @@ li {
     background-color: var(--nav-bar-button-hover);
 }
 
-/* ============================================= Features ============================================= */
+/* =========================================== Features ========================================== */
 
 #features .wrapper{
     padding-block: 6.4rem;
@@ -773,7 +773,33 @@ div.features-selected {
     object-fit: scale-down;
 }
 
-/* ============================================= Footer ============================================= */
+/* =========================================== Partners =========================================== */
+
+#partners .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 6.4rem;
+}
+
+#partners .wrapper p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    color: var(--webpage-p-color);
+}
+
+.partners-imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slider-mobile {
+    display: none;
+}
+
+/* =========================================== Footer =========================================== */
 
 footer {
     width: 100%;
@@ -862,7 +888,7 @@ footer .wrapper {
     padding-top: 1rem;
 }
 
-/* ============================================= Responsiveness ============================================= */
+/* ======================================= Responsiveness ======================================== */
 
 /* ================================= Tablet area ================================= */
 
@@ -1281,7 +1307,30 @@ footer .wrapper {
         font-size: 1rem;
         line-height: 1.5rem;
     }
+
+    /* =========== Partners =========== */
+
+    #partners .wrapper {
+        gap: 2.5rem;
+        padding: 2.4rem;
+    }
+
+    #partners .wrapper p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
     
+    .partners-imgs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
+        justify-items: flex-start;
+    }
+
+    .slider-mobile {
+        display: none;
+    }
+  
     /* =========== Footer =========== */
 
     #footer_content {
@@ -1792,7 +1841,53 @@ footer .wrapper {
     .features-solutions img {
         display: none;
     }
-       
+
+    /* =========== Partners =========== */
+
+    #partners .wrapper {
+        gap: 2.5rem;
+        padding: 2rem 4rem;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #partners .wrapper p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .slider-mobile {
+        display: initial;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }   
+
+        to {
+            transform: translateX(-100%);
+        }     
+    }
+    
+    .slider {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .slider:hover, .paused {
+        animation-play-state: paused;
+    }
+
+    .partners-imgs {
+        display: inline-block;
+        animation: 20s slide infinite linear;       
+    }
+
+    .partners-imgs img {
+        padding-inline: 2rem;
+    } 
+    
     /* =========== Footer =========== */
 
     #footer_content {
