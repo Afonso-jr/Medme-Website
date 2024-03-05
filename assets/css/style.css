@@ -799,6 +799,52 @@ div.features-selected {
     display: none;
 }
 
+/* ======================================== Testimonial ========================================= */
+
+#testimonial .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4.8rem;
+    align-items: center;
+    padding: 12.8rem 6.4rem;   
+}
+
+#testimonial img {
+    border-radius: 50%;
+    width: 32.8rem;
+    height: 32.8rem;
+}
+
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.testimonial-text h1 {
+    color: var(--webpage-title-color);
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 4.4rem;
+    margin-block: 2.4rem 3.2rem;
+    width: 90%;
+}
+
+.testimonial-text h2 {
+    color: var(--feature-h1-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.testimonial-text p {
+    color: var(--webpage-p-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
 /* =========================================== Footer =========================================== */
 
 footer {
@@ -1312,7 +1358,7 @@ footer .wrapper {
 
     #partners .wrapper {
         gap: 2.5rem;
-        padding: 2.4rem;
+        padding: 3rem;
     }
 
     #partners .wrapper p {
@@ -1330,7 +1376,36 @@ footer .wrapper {
     .slider-mobile {
         display: none;
     }
+
+    /* =========== Testimonial =========== */
+
+    #testimonial .wrapper {
+        gap: 2.5rem;
+        padding: 10rem 3rem;   
+    }
+
+    #testimonial img {
+        width: 28rem;
+        height: 28rem;
+    }
+    
+    .testimonial-text h1 {
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+        margin-block: 1.5rem 3rem;
+        width: 100%;
+    }
+
+    .testimonial-text h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
   
+    .testimonial-text p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
     /* =========== Footer =========== */
 
     #footer_content {
@@ -1847,9 +1922,7 @@ footer .wrapper {
     #partners .wrapper {
         gap: 2.5rem;
         padding: 2rem 4rem;
-        overflow: hidden;
-        white-space: nowrap;
-    }
+     }
 
     #partners .wrapper p {
         font-size: 1rem;
@@ -1888,6 +1961,37 @@ footer .wrapper {
         padding-inline: 2rem;
     } 
     
+    /* =========== Testimonial =========== */
+
+    #testimonial .wrapper {
+        display: flex;
+        flex-direction: column;       
+        gap: 3.5rem;
+        padding: 5rem 2rem;   
+    }
+
+    #testimonial img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .testimonial-text h1 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-block: 1rem 1.5rem;
+        width: 100%;
+    }
+
+    .testimonial-text h2 {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    .testimonial-text p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
     /* =========== Footer =========== */
 
     #footer_content {
