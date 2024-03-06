@@ -48,3 +48,27 @@
 
 --> Verify to "receive" the img with macbook on it
 --> An idea is to have 3 diferrent img for each solution 
+
+------------------------------------ Partners ---------------------------------
+
+  To do list:
+
+--> 
+
+----------------------------------- Testimonial -------------------------------
+
+  To do list:
+
+--> 
+
+----------------------------- Inernal Testimonial -----------------------------
+
+  To do list:
+
+--> Validate mobile Layout
+
+------------------------------ Cta th-With Img --------------------------------
+
+  To do list:
+
+--> 
