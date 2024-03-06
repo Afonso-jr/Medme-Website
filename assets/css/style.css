@@ -30,6 +30,7 @@
     --numeric-cards-background: rgba(255, 255, 255, 0.3);
     --feature-h1-color: rgba(16, 24, 40, 1);
     --feature-info-not-active-border-color : rgba(242, 244, 247, 1);
+    --cta-with-img-border-color: rgba(208, 213, 221, 1);
     --footer-backgroud: rgba(12, 17, 29, 1);
     --footer-h3: rgba(245, 245, 246, 1);
     --footer-link: rgba(206, 207, 210, 1);
@@ -918,6 +919,85 @@ div.features-selected {
     line-height: 2rem;
 }
 
+/* ========================================= Cta With Img ======================================= */
+
+#cta-with-img .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+    padding: 6.4rem 6.4rem;  
+}
+
+.cta-with-img-title {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+}
+
+.cta-with-img-title h1 {
+    color: var(--webpage-title-color);
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 6rem;
+    margin-bottom: 2.4rem;
+}
+
+.cta-with-img-title p {
+    display: flex;
+    color: var(--webpage-p-color);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 4.8rem;
+}
+
+.cta-with-img-buttons {
+    display: flex;
+    align-self: flex-start;
+    gap: 1.6rem;
+}
+
+.cta-with-img-buttons button {
+    cursor: pointer;
+    padding: 1.2rem 1.8rem;
+    border-radius: 5rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: 0.1rem solid var(--cta-with-img-border-color);
+    background-color: var(--webpage-background);
+}
+
+.cta-with-img-buttons button:hover {
+    background-color: var(--nav-bar-sub-menu-background);
+}
+
+.cta-with-img-buttons button a {
+    text-decoration: none;
+    font-family: 'Inter';
+    color: var(--webpage-p-color-hover);
+    font-size: 1.4rem;
+}
+
+.cta-with-img-buttons button:nth-child(2) a {
+    color: var(--webpage-title-color);
+}
+
+.cta-with-img-buttons button:nth-child(2) {
+    border: 0.1rem solid var(--nav-bar-button-border-color);
+    background-color: var(--nav-bar-button-background);
+}
+
+.cta-with-img-buttons button:nth-child(2):hover {
+    background-color: var(--nav-bar-button-hover);
+}
+
+#cta-with-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
 /* =========================================== Footer =========================================== */
 
 footer {
@@ -1235,19 +1315,7 @@ footer .wrapper {
         width: 75%;
     }   
 
-    .home-buttons {
-        gap: 1rem ;
-    }
-
-    .home-buttons button {
-        padding: 0.7rem 1.3rem;
-        line-height: 1.5rem;
-        font-size: 1rem;
-    }
-
-    .home-buttons button a {
-        font-size: 1rem;
-    }
+ v
 
     .home-img-display {
         height: 65.7rem ;
@@ -1340,7 +1408,7 @@ footer .wrapper {
     }
 
     .about-infos a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         gap: 0.6rem;
     }
 
@@ -1423,7 +1491,7 @@ footer .wrapper {
     }
 
     .features-infos a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.5rem;
     }
 
@@ -1530,6 +1598,39 @@ footer .wrapper {
     .internal-testimonial-card p {
         font-size: 1.4rem;
         line-height: 1.8rem;
+    }
+
+    /* ========= Cta With Img ========= */
+
+    #cta-with-img .wrapper {
+        gap: 3rem;
+        padding: 3.2rem 3.2rem;  
+    }
+
+    .cta-with-img-title h1 {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-with-img-title p {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 7rem;
+    }
+    
+    .cta-with-img-buttons {
+        gap: 1rem;
+    }
+    
+    .cta-with-img-buttons button {
+        padding: 0.7rem 1.3rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }    
+    
+    .cta-with-img-buttons button a {
+        font-size: 1rem;
     }
 
     /* =========== Footer =========== */
@@ -2168,6 +2269,40 @@ footer .wrapper {
     .internal-testimonial-card p {
         font-size: 1rem;
         line-height: 1.4rem;
+    }
+
+    /* ========= Cta With Img ========= */
+
+    #cta-with-img .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        padding: 2.8rem 2.8rem;  
+    }
+
+    .cta-with-img-title h1 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-with-img-title p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .cta-with-img-buttons {
+        gap: 0.5rem;
+    }
+    
+    .cta-with-img-buttons button {
+        padding: 0.7rem 1rem;
+        line-height: 1rem;
+    }    
+    
+    .cta-with-img-buttons button a {
+        font-size: 0.8rem;
     }
     
     /* =========== Footer =========== */
