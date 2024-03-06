@@ -1315,8 +1315,6 @@ footer .wrapper {
         width: 75%;
     }   
 
- v
-
     .home-img-display {
         height: 65.7rem ;
     }
@@ -1616,7 +1614,7 @@ footer .wrapper {
     .cta-with-img-title p {
         font-size: 2rem;
         line-height: 3rem;
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
     }
     
     .cta-with-img-buttons {
@@ -2281,7 +2279,7 @@ footer .wrapper {
     }
 
     .cta-with-img-title h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 2.5rem;
         margin-bottom: 1.5rem;
     }
