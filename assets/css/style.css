@@ -31,6 +31,7 @@
     --feature-h1-color: rgba(16, 24, 40, 1);
     --feature-info-not-active-border-color : rgba(242, 244, 247, 1);
     --cta-with-img-border-color: rgba(208, 213, 221, 1);
+    --fac-border-color: rgba(234, 236, 240, 1);
     --footer-backgroud: rgba(12, 17, 29, 1);
     --footer-h3: rgba(245, 245, 246, 1);
     --footer-link: rgba(206, 207, 210, 1);
@@ -50,7 +51,7 @@ html {
     body {    
         font-family: 'Inter';
         font-size: 1.6rem;
-        text-align: center;  
+        text-align: center;
         background: url('../img/body-background.svg') no-repeat center center fixed;
         background-size: cover;
     }
@@ -245,7 +246,7 @@ header {
 }
 
 .submenusolucoes.show-solutions-submenu {
-    max-height: 900px;
+    max-height: 90rem;
     transition: max-height 1s ease-in, opacity .5s linear;
     opacity: 1;
     display: block;
@@ -256,7 +257,7 @@ header {
 }
 
 .submenu.show-access-submenu {
-    max-height: 900px;
+    max-height: 90rem;
     transition: max-height 1s ease-in, opacity .5s linear;
     opacity: 1;   
     display: block;
@@ -323,7 +324,7 @@ li {
     display: none;
 }
 
-/* ============================================= Home ============================================= */
+/* ============================================= Home ============================================ */
 
 #home .wrapper {
     margin-top: 8rem;
@@ -459,7 +460,7 @@ li {
     width: 120%;
 }
 
-/* ======================================== Numeric Data ======================================== */
+/* ======================================== Numeric Data ========================================= */
 
 #numeric .wrapper {
     display: flex;
@@ -535,7 +536,7 @@ li {
     font-size: 1.6rem;
 }
 
-/* =========================================== About =========================================== */
+/* ============================================ About ============================================ */
 
 #about .wrapper{
     margin-block: 3.2rem;
@@ -636,7 +637,7 @@ li {
     border-bottom-left-radius: initial;
 }
 
-/* =========================================== CTA =========================================== */
+/* ============================================= CTA ============================================= */
 
 #cta .wrapper {
     padding: 3.2rem 6.4rem 3.2rem 6.4rem;
@@ -774,7 +775,7 @@ div.features-selected {
     object-fit: scale-down;
 }
 
-/* =========================================== Partners =========================================== */
+/* ========================================== Partners =========================================== */
 
 #partners .wrapper {
     display: flex;
@@ -800,7 +801,7 @@ div.features-selected {
     display: none;
 }
 
-/* ======================================== Testimonial ========================================= */
+/* ========================================= Testimonial ========================================= */
 
 #testimonial .wrapper {
     display: flex;
@@ -919,7 +920,7 @@ div.features-selected {
     line-height: 2rem;
 }
 
-/* ========================================= Cta With Img ======================================= */
+/* ========================================= Cta With Img ======================================== */
 
 #cta-with-img .wrapper {
     display: grid;
@@ -996,6 +997,126 @@ div.features-selected {
 #cta-with-img img {
     width: 100%;
     object-fit: cover;
+}
+
+/* =========================================== FAC ============================================== */
+
+#fac .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 6.4rem 6.4rem;
+}
+
+.fac-title h1 {
+    color: var(--webpage-title-color);
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 4.4rem;
+    margin-bottom: 2rem;
+}
+
+.fac-title p {
+    color: var(--webpage-p-color);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 6.4rem;
+}
+
+.fac-answered-question {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 76.8rem;
+    margin-inline: auto;
+}
+
+.fac-question:hover,
+.fac-question h1:hover {
+    cursor: pointer;
+}
+
+.fac-answered-question:not(:nth-child(2)) {
+    border-top: 0.1rem solid var(--fac-border-color);
+}
+
+.fac-answered-question p {
+    color: var(--webpage-p-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    text-align: start;
+    max-height: 0;
+    transition: max-height 0.8s ease-out;
+    overflow: hidden;
+    margin-bottom: 3.2rem;
+}
+
+.fac-answered-question p.answer-show {
+    max-height: 90rem;
+    transition: max-height 1.5s ease-in;         
+}
+
+.fac-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2.4rem;
+}
+
+.fac-question h1 {
+    color: var(--feature-h1-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+}
+
+.close-question {
+    display: none;
+}
+
+.fac-cta {
+    margin-top: 6.4rem;
+    padding: 3.2rem 3.2rem 4.2rem 3.2rem;
+    background-color: var(--home-button-color-hover);
+}
+
+.fac-cta h1 {
+    color: var(--webpage-title-color);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 0.8rem;
+}
+
+.fac-cta p {
+    color: var(--webpage-p-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.fac-cta button {
+    cursor: pointer;
+    padding: 1.2rem 1.8rem;
+    border-radius: 5rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: none;
+    background-color: var(--nav-bar-button-background);
+}
+
+.fac-cta button:hover {
+    background-color: var(--nav-bar-button-hover);
+}
+
+.fac-cta button a {
+    text-decoration: none;
+    font-family: 'Inter';
+    color: var(--webpage-title-color);
+    font-size: 1.4rem;
 }
 
 /* =========================================== Footer =========================================== */
@@ -1092,7 +1213,7 @@ footer .wrapper {
 /* ================================= Tablet area ================================= */
 
 @media screen and (max-width: 1132px) and (min-width: 701px) {
-    /* =========== General =========== */
+    /* ================ General ================ */
 
     body {  
         background: url('../img/body-background.svg') no-repeat center center fixed;
@@ -1217,7 +1338,7 @@ footer .wrapper {
         display: none;
     }
 
-    /* =========== Nav Submenu =========== */
+    /* ============== Nav Submenu ============== */
    
     .submenu-solucoes-mobile {
         width: 80%;
@@ -1283,7 +1404,7 @@ footer .wrapper {
         font-size: 1.2rem;  
     }
 
-    /* =========== home =========== */
+    /* ================== home ================= */
   
     #home .wrapper {
         gap: 4rem;
@@ -1323,7 +1444,7 @@ footer .wrapper {
         bottom: -10rem;
     }
 
-    /* =========== Numeric Data =========== */
+    /* ============== Numeric Data ============= */
     
     #numeric div.wrapper {
         gap: 4.4rem;
@@ -1369,7 +1490,7 @@ footer .wrapper {
         font-size: 1.2rem;
     }
 
-    /* =========== About =========== */
+    /* ================= About ================= */
 
     div.about-title h1 {
         font-size: 2.8rem;
@@ -1419,7 +1540,7 @@ footer .wrapper {
         height: 48.2rem;
     }
 
-    /* =========== CTA =========== */
+    /* ================== CTA ================== */
     
     #cta .wrapper {
         padding: 3.2rem 6.4rem 3.2rem 6.4rem;
@@ -1451,7 +1572,7 @@ footer .wrapper {
         line-height: 1.5rem;
     }  
 
-    /* ========== Features ========== */
+    /* ================ Features =============== */
     
     .features-title h1 {
         font-size: 2.8rem;
@@ -1493,7 +1614,7 @@ footer .wrapper {
         line-height: 1.5rem;
     }
 
-    /* =========== Partners =========== */
+    /* ================ Partners =============== */
 
     #partners .wrapper {
         gap: 2.5rem;
@@ -1516,7 +1637,7 @@ footer .wrapper {
         display: none;
     }
 
-    /* =========== Testimonial =========== */
+    /* ============== Testimonial ============== */
 
     #testimonial .wrapper {
         gap: 2.5rem;
@@ -1545,7 +1666,7 @@ footer .wrapper {
         line-height: 2rem;
     }
 
-    /* ===== Inernal testimonial ===== */
+    /* ========== Inernal testimonial ========== */
 
     #inernal-testimonial .wrapper {
         gap: 4rem;
@@ -1598,7 +1719,7 @@ footer .wrapper {
         line-height: 1.8rem;
     }
 
-    /* ========= Cta With Img ========= */
+    /* ============= Cta With Img ============== */
 
     #cta-with-img .wrapper {
         gap: 3rem;
@@ -1631,7 +1752,68 @@ footer .wrapper {
         font-size: 1rem;
     }
 
-    /* =========== Footer =========== */
+    /* ================== FAC ================== */
+
+    #fac .wrapper {
+        padding: 3.2rem 3.2rem;
+    }
+
+    .fac-title h1 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
+
+    .fac-title p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .fac-answered-question {
+        gap: 0.8rem;
+        width: 50rem;
+        margin-inline: auto;
+    }
+
+    .fac-question:hover,
+    .fac-question h1:hover {
+        cursor: initial;
+    }
+
+    .fac-answered-question p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .fac-question {
+        padding-top: 1.8rem;
+    }
+
+    .fac-question h1 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+    }
+
+    .close-question {
+        display: none;
+    }
+    
+    .fac-cta {
+        margin-top: 3.2rem;
+    }
+
+    .fac-cta h1 {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .fac-cta p {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+   
+    /* ================= Footer ================ */
 
     #footer_content {
         grid-template-columns: repeat(3, 1fr);
@@ -1645,7 +1827,7 @@ footer .wrapper {
 /* ================================= Mobile area ================================= */
 
 @media screen and (max-width: 700px) {
-    /* =========== General =========== */
+    /* ================ General ================ */
 
     body {
         background: url('../img/body-background.svg') no-repeat center center fixed;
@@ -1759,7 +1941,7 @@ footer .wrapper {
         display: none;
     }
 
-    /* =========== Nav Submenu =========== */
+    /* ============== Nav Submenu ============== */
 
     .submenu-solucoes-mobile {
         width: 80%;
@@ -1834,7 +2016,7 @@ footer .wrapper {
         margin-bottom: 10rem;
     }
 
-    /* =========== home =========== */
+    /* ================== home ================= */
 
     #home .wrapper {
         padding: 2rem 2.4rem; 
@@ -1910,7 +2092,7 @@ footer .wrapper {
         max-width: 110%;
     }
 
-    /* =========== Numeric Data =========== */
+    /* ============== Numeric Data ============= */
 
     #numeric div.wrapper {
         gap: 3rem;
@@ -1958,7 +2140,7 @@ footer .wrapper {
         line-height: 1.5rem;
     }
 
-    /* =========== About =========== */
+    /* ================= About ================= */
     
     .about-solutions {
         display: grid;
@@ -2046,7 +2228,7 @@ footer .wrapper {
         display: none;
     }
 
-    /* =========== CTA =========== */
+    /* ================== CTA ================== */
 
     #cta .wrapper {
         padding: 1.5rem 3.2rem 1.5rem 3.2rem;
@@ -2080,7 +2262,7 @@ footer .wrapper {
         line-height: 1.5rem;
     }  
 
-    /* ========== Features ========== */
+    /* =============== Features ================ */
 
     .features-solutions {
         display: grid;
@@ -2142,7 +2324,7 @@ footer .wrapper {
         display: none;
     }
 
-    /* =========== Partners =========== */
+    /* =============== Partners ================ */
 
     #partners .wrapper {
         gap: 2.5rem;
@@ -2186,7 +2368,7 @@ footer .wrapper {
         padding-inline: 2rem;
     } 
     
-    /* =========== Testimonial =========== */
+    /* ============== Testimonial ============== */
 
     #testimonial .wrapper {
         display: flex;
@@ -2217,7 +2399,7 @@ footer .wrapper {
         line-height: 1.5rem;
     }
     
-    /* ===== Inernal testimonial=====*/
+    /* ========== Inernal testimonial ========== */
 
     #inernal-testimonial .wrapper {
         gap: 3rem;
@@ -2269,7 +2451,7 @@ footer .wrapper {
         line-height: 1.4rem;
     }
 
-    /* ========= Cta With Img ========= */
+    /* ============== Cta With Img ============= */
 
     #cta-with-img .wrapper {
         display: grid;
@@ -2295,15 +2477,94 @@ footer .wrapper {
     }
     
     .cta-with-img-buttons button {
-        padding: 0.7rem 1rem;
+        padding: 1rem;
         line-height: 1rem;
     }    
     
     .cta-with-img-buttons button a {
         font-size: 0.8rem;
     }
+
+    /* ================== FAC ================== */
+
+    #fac .wrapper {
+        padding: 2rem 2rem;
+    }
+
+    .fac-title h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .fac-title p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .fac-answered-question {
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .fac-question:hover,
+    .fac-question h1:hover {
+        cursor: initial;
+    }
+
+    .fac-answered-question p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .fac-question {
+        padding-top: 1.2rem;
+    }
     
-    /* =========== Footer =========== */
+    .open-question,
+    .close-question {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .fac-question h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2rem;
+        padding-right: 1rem;
+        width: 90%;
+    }
+
+    .close-question {
+        display: none;
+    }
+    
+    .fac-cta {
+        margin-top: 2rem;
+    }
+
+    .fac-cta h1 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .fac-cta p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .fac-cta button {
+        padding: 1rem;
+        line-height: 1rem;
+    }   
+
+    .fac-cta button a {
+        font-size: 1rem;
+    }
+
+    /* ================= Footer ================ */
 
     #footer_content {
         grid-template-columns: repeat(1, 1fr);

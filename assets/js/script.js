@@ -151,3 +151,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Open and close answer question
+
+document.addEventListener('DOMContentLoaded', function () {
+    let facQuestions = document.querySelectorAll('.fac-question');
+
+    facQuestions.forEach(function(facQuestion) {
+        let answerPTag = facQuestion.nextElementSibling;
+        let openSvg = facQuestion.querySelector('.open-question');
+        let closeSvg = facQuestion.querySelector('.close-question');
+
+        facQuestion.addEventListener('click', function (event) {
+            event.stopPropagation();
+            if (answerPTag.classList.contains('answer-show')) {
+                answerPTag.classList.remove('answer-show');
+                openSvg.style.display = 'initial';
+                closeSvg.style.display = 'none';
+            } else {
+                answerPTag.classList.add('answer-show');
+                openSvg.style.display = 'none';
+                closeSvg.style.display = 'initial';
+            }
+        });
+    });
+});
