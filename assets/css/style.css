@@ -32,6 +32,10 @@
     --feature-info-not-active-border-color : rgba(242, 244, 247, 1);
     --cta-with-img-border-color: rgba(208, 213, 221, 1);
     --fac-border-color: rgba(234, 236, 240, 1);
+    --form-placeholder-color: rgba(102, 112, 133, 1);
+    --form-selected-option-color: rgba(232, 240, 254,1);
+    --form-hover-seletion-option: rgba(240, 240, 240, 1);
+    --form-loader-color: rgb(221, 221, 221);
     --footer-backgroud: rgba(12, 17, 29, 1);
     --footer-h3: rgba(245, 245, 246, 1);
     --footer-link: rgba(206, 207, 210, 1);
@@ -1047,14 +1051,14 @@ div.features-selected {
     line-height: 2.4rem;
     text-align: start;
     max-height: 0;
-    transition: max-height 0.8s ease-out;
+    transition: max-height 0.5s ease-out;
     overflow: hidden;
     margin-bottom: 3.2rem;
 }
 
 .fac-answered-question p.answer-show {
     max-height: 90rem;
-    transition: max-height 1.5s ease-in;         
+    transition: max-height 1s ease-in;         
 }
 
 .fac-question {
@@ -1117,6 +1121,254 @@ div.features-selected {
     font-family: 'Inter';
     color: var(--webpage-title-color);
     font-size: 1.4rem;
+}
+
+/* =========================================== Form =========================================== */
+
+#form .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+    padding: 12.8rem 6.4rem;
+}
+
+#form .wrapper img {
+    height: 76.8rem;
+    width: 100%;
+    border-radius: 2.4rem;
+}
+
+.form-infos {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 3.2rem;
+    justify-content: center;
+}
+
+.form-infos h1 {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--webpage-title-color);
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 4.4rem;
+    margin-bottom: 2rem;
+}
+
+.form-infos p {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--webpage-p-color);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 4.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+}
+
+.complete-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-label {
+    display: block;
+    text-align: start;
+    color: var(--webpage-p-color-hover);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-input {
+    border: 1px solid var(--cta-with-img-border-color);
+    background-color: var(--webpage-background);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    border-radius: 5rem;
+    padding: 1rem 1.4rem;
+    width: 100%;
+    outline: none;
+}
+
+.form-divs:nth-child(6) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+
+.form-divs:nth-child(6) input {
+    display: flex;
+    text-align: start;
+    width: auto;
+}
+
+.form-divs:nth-child(6) label {
+   margin: 0;
+   padding: 0;
+   margin-left: 1.2rem;
+}
+
+.form-divs:nth-child(6) a{
+    color: inherit;
+}
+
+#iprivacy-policy {
+    border: 2rem solid red;
+    width: 2rem;
+    height: 2rem;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    background-color: var(--webpage-background);
+    border: 0.1rem solid var(--cta-with-img-border-color);
+    border-radius: 5rem;
+    color: var(--form-placeholder-color);
+    padding: 1rem 1.4rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.selected-option svg {
+    position: absolute;
+    right: 1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.selected-option.selected {
+    color: var(--feature-h1-color);
+    background-color: var(--form-selected-option-color);
+}
+
+.options-list {
+    position: absolute;
+    text-align: start;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 32rem;
+    overflow: auto;
+    border: 1px solid var(--fac-border-color);
+    border-radius: 0.8rem;
+    background-color: var(--webpage-background);
+    list-style: none;
+    margin-block: 0.8rem 0.6rem;
+    padding: 0.1rem 0.6rem;
+    display: none;
+    z-index: 2;
+    scrollbar-width: thin;
+}
+
+.options-list li {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    background-color: var(--webpage-background);
+    z-index: 2;
+}
+
+.options-list li svg {
+    margin-left: auto;
+}
+
+.options-list li:hover {
+    background-color: var(--form-hover-seletion-option);
+}
+
+.form-divs {
+    width: 100%;
+}
+
+form button {
+    cursor: pointer;
+    font-family: 'Inter';
+    padding: 1.2rem 1.8rem;
+    border-radius: 5rem;
+    border: 0.1rem solid var(--nav-bar-button-background);
+    color: var(--webpage-title-color);
+    background-color: var(--nav-bar-button-background);
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: var(--nav-bar-button-hover);
+}
+
+.form-success-message {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 0;
+}
+
+.form-success-message h1 {
+    color: var(--webpage-title-color);
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 4.4rem;
+    margin-bottom: 2rem; 
+}
+
+.form-success-message p {
+    color: var(--webpage-p-color);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+.form-success-message.show {
+    display: flex;
+    max-height: 100%;
+}
+
+.show {
+    display: block;
+}
+
+.loader {
+    display: none;
+    margin: auto;
+    cursor: wait;
+    content: "";
+    width: 4.6rem;
+    height: 4.6rem;
+    border: 0.8rem solid var(--form-loader-color);
+    border-top-color: var(--webpage-title-color);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
 }
 
 /* =========================================== Footer =========================================== */

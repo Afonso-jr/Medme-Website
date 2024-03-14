@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/logo.png">
     <title>MedMe</title>
 </head>
 
@@ -803,6 +805,91 @@
         </div>
     </section>
 
+    <section id="form">
+        <div class="wrapper">
+            <img src="./assets/img/teste.jpg" alt="Img importante da Medme">
+            <div class="form-infos">
+                <h1>Entre em contato</h1>
+                <p>Estamos sempre disponíveis para te ajudar.</p>           
+                <form>
+                    <div class="complete-name form-divs">
+                        <div>
+                            <label for="iname" class="form-label" >Primeiro nome</label>
+                            <input type="text" name="name" id="iname" autocomplete="new-password" placeholder="João" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="isurname" class="form-label">Sobrenome</label>
+                            <input type="text" id="isurname" name="surname" autocomplete="new-password" placeholder="Silva" required class="form-input">
+                        </div>                    
+                    </div>
+                    <div class="form-divs">
+                        <span for="iprofile" class="form-label">Em qual perfil você se encaixa?</span>
+                        <input type="hidden" name="profile" id="iprofile" required>
+                        <div class="custom-select">
+                            <div class="selected-option" required>
+                                Selecione nesta lista...
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <ul class="options-list">
+                                <li data-value="Phoenix Baker @phoenix"><strong>Phoenix Baker</strong>&nbsp@phoenix</li>
+                                <li data-value="Olivia Rhye @olivia"><strong>Olivia Rhye</strong>&nbsp@olivia</li>
+                                <li data-value="Lana Steiner @lana"><strong>Lana Steiner</strong>&nbsp@lana</li>
+                                <li data-value="Demi Wilkinson @demi"><strong>Demi Wilkinson</strong>&nbsp@demi</li>
+                                <li data-value="Candice Wu @candice"><strong>Candice Wu</strong>&nbsp@candice</li>
+                                <li data-value="Natali Craig @natali"><strong>Natali Craig</strong>&nbsp@natali</li>
+                                <li data-value="Drew Cano @drew"><strong>Drew Cano</strong>&nbsp@drew</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-divs">
+                        <span class="form-label">Sobre o que deseja tratar?</span>
+                        <div class="custom-select">
+                            <div class="selected-option" required>
+                                Selecione nesta lista...
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <ul class="options-list">
+                                <li data-value="Phoenix Baker @phoenix"><strong>Phoenix Baker</strong>&nbsp@phoenix</li>
+                                <li data-value="Olivia Rhye @olivia"><strong>Olivia Rhye</strong>&nbsp@olivia</li>
+                                <li data-value="Lana Steiner @lana"><strong>Lana Steiner</strong>&nbsp@lana</li>
+                                <li data-value="Demi Wilkinson @demi"><strong>Demi Wilkinson</strong>&nbsp@demi</li>
+                                <li data-value="Candice Wu @candice"><strong>Candice Wu</strong>&nbsp@candice</li>
+                                <li data-value="Natali Craig @natali"><strong>Natali Craig</strong>&nbsp@natali</li>
+                                <li data-value="Drew Cano @drew"><strong>Drew Cano</strong>&nbsp@drew</li>
+                            </ul>
+                        </div>
+                        <input type="hidden" name="subject" id="isubject" required>
+                    </div>                 
+                    <div class="form-divs">
+                        <label for="iemail" class="form-label">Email</label>
+                        <input type="email" id="iemail" name="email" class="form-input" placeholder="joaosilva@email.com.br" autocomplete="new-password" required>
+                    </div>
+                    <div class="form-divs">
+                        <label for="iphone" class="form-label" autocomplete="off">Telefone</label>
+                        <input type="tel" id="iphone" name="phone" required class="form-input" autocomplete="off">
+                    </div>
+                    <div class="form-divs">
+                        <input type="checkbox" id="iprivacy-policy" name="privacy-policy" class="form-input" required>
+                        <label for="iprivacy-policy" class="form-label">Concordo com a <a href="#">política de privacidade</a>.</label>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LcChZcpAAAAALzk1ReYK-R8EgPl6vJqXIBexZ-U"></div>
+                    <div class="form-divs">
+                        <button id="form-button" type="submit" class="">Falar com um consultor</button>
+                    </div>
+                    <span class="loader"></span>
+                </form>
+             </div>
+            <div class="form-success-message">
+                <h1>Obrigado pelo envio!</h1>
+                <p>Em breve retornaremos o contato!</p>
+            </div>
+        </div>
+    </section>
+
     <footer id="footer">
         <div class="wrapper">            
             <div id="footer_content">              
@@ -999,6 +1086,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/jquery341.js"></script>
     <script src="assets/js/script.js" defer></script>
 
 </body>
