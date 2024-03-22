@@ -543,7 +543,7 @@ li {
 /* ============================================ About ============================================ */
 
 #about .wrapper{
-    margin-block: 3.2rem;
+    margin-block: 6.4rem;
 }
 
 .about-title h1 {
@@ -644,7 +644,7 @@ li {
 /* ============================================= CTA ============================================= */
 
 #cta .wrapper {
-    padding: 3.2rem 6.4rem 3.2rem 6.4rem;
+    padding: 6.4rem 8rem;
 }
 
 .cta-info {
@@ -1136,6 +1136,7 @@ div.features-selected {
     height: 76.8rem;
     width: 100%;
     border-radius: 2.4rem;
+    object-fit: cover;
 }
 
 .form-infos {
@@ -1163,6 +1164,7 @@ div.features-selected {
     font-weight: 400;
     line-height: 3rem;
     margin-bottom: 4.8rem;
+    text-align: start;
 }
 
 form {
@@ -1176,6 +1178,7 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .form-label {
@@ -1225,7 +1228,6 @@ form {
 }
 
 #iprivacy-policy {
-    border: 2rem solid red;
     width: 2rem;
     height: 2rem;
 }
@@ -1886,9 +1888,37 @@ footer .wrapper {
     }
 
     .slider-mobile {
-        display: none;
+        display: initial;
     }
 
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }   
+
+        to {
+            transform: translateX(-100%);
+        }     
+    }
+    
+    .slider {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .slider:hover, .paused {
+        animation-play-state: paused;
+    }
+
+    .partners-imgs {
+        display: inline-block;
+        animation: 20s slide infinite linear;       
+    }
+
+    .partners-imgs img {
+        padding-inline: 2rem;
+    }
+    
     /* ============== Testimonial ============== */
 
     #testimonial .wrapper {
@@ -2063,6 +2093,70 @@ footer .wrapper {
     .fac-cta p {
         font-size: 1.6rem;
         line-height: 2.5rem;
+    }
+
+    /* ================== Form ================= */
+    
+    #form .wrapper {
+        display: flex;
+        padding: 6rem 3.2rem;
+    }
+
+    #form .wrapper img {
+        display: none;
+    }
+
+    .form-infos {
+        margin-inline: auto;
+        flex-direction: column;
+        padding-inline: 3.2rem;
+        justify-content: center;
+    }
+
+    .form-infos h1 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-infos p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    form {
+        gap: 2.4rem;
+    }
+
+        .form-success-message {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 0;
+    }
+
+    .form-success-message h1 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+        margin-bottom: 2rem; 
+    }
+
+    .form-success-message p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .form-success-message.show {
+        margin-inline: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .loader {
+        width: 4.6rem;
+        height: 4.6rem;
     }
    
     /* ================= Footer ================ */
@@ -2284,7 +2378,7 @@ footer .wrapper {
     button.home-subheading {
         gap: 0.2rem;
         border-radius: 1.7rem;
-        font-size: 0.7rem;
+        font-size: 1rem;
         line-height: 1rem;
         padding: 0.4rem;
     }
@@ -2332,7 +2426,7 @@ footer .wrapper {
     }
 
     .home-buttons button a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .home-img-display {
@@ -2488,7 +2582,7 @@ footer .wrapper {
 
     .cta-info {
         flex-direction: column;
-        gap: 6rem;
+        gap: 1.66rem;
         padding: 3rem;
     }
     
@@ -2665,14 +2759,13 @@ footer .wrapper {
     .inernal-testimonial-title h1 {
         font-size: 1.8rem;
         line-height: 3rem;
-        margin-bottom: 1rem;
     }
-
+    
     .inernal-testimonial-title p {
         font-size: 1.2rem;
         line-height: 2rem;
     }
-
+    
     .internal-testimonial-cards {
         display: grid;
         grid-template-columns: 1fr;
@@ -2682,13 +2775,23 @@ footer .wrapper {
     .internal-testimonial-card {
         padding: 1.5rem;
     }
+
+    .internal-testimonial-card svg {
+        margin-right: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        vertical-align: middle;
+    }
     
     .internal-testimonial-card h1 {
+        display: inline;
         font-size: 1.6rem;
-        line-height: 2rem;
+        line-height: 2.4rem;
+        text-align: center;
     }
 
     .internal-testimonial-card h2 {
+        margin-top: 1.5rem;
         font-size: 1.4rem;
         line-height: 1.8rem;
     }
@@ -2734,7 +2837,7 @@ footer .wrapper {
     }    
     
     .cta-with-img-buttons button a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     /* ================== FAC ================== */
@@ -2814,6 +2917,84 @@ footer .wrapper {
 
     .fac-cta button a {
         font-size: 1rem;
+    }
+
+    /* ================== Form ================= */
+    
+    #form .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+    }
+
+    #form .wrapper img {
+        display: none;
+    }
+
+    .form-infos {
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--nav-bar-sub-menu-background);
+    }
+
+    .complete-name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-infos h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: start;
+    }
+
+    .form-infos p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .form-label {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .form-input {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    form {
+        gap: 1.8rem;
+    }
+
+    .selected-option {
+        font-size: 1.2rem;
+    }
+
+    form button {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .g-recaptcha {
+        transform: scale(0.7) translate(-25%);
+    }
+
+    .form-success-message h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .form-success-message p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .loader {
+        width: 4.6rem;
+        height: 4.6rem;
     }
 
     /* ================= Footer ================ */

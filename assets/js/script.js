@@ -197,20 +197,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     optionsList.addEventListener('click', function(event) {
-        if (event.target.tagName === 'LI') {
-            var selectedText = event.target.textContent.trim();
+        var listItem = event.target.closest('li');
+        if (listItem) {
+            var selectedText = listItem.textContent.trim();
             var atIndex = selectedText.indexOf('@');
             var name = selectedText.substring(0, atIndex).trim();
             var rest = selectedText.substring(atIndex);
-            selectedOption.innerHTML = `<strong>${name}</strong> &nbsp;${rest}`; 
-            selectedOption.classList.add('selected'); 
-            hiddenInput.value = event.target.getAttribute('data-value');
+            selectedOption.innerHTML = `<strong>${name}</strong> &nbsp;${rest}`;
+            selectedOption.classList.add('selected');
+            hiddenInput.value = listItem.getAttribute('data-value');
             optionsList.style.display = 'none';
-
+    
             if (lastSelectedIcon) {
                 lastSelectedIcon.remove();
             }
-
+    
             var arrowIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             arrowIcon.setAttribute('class', 'arrow-icon');
             arrowIcon.setAttribute('width', '20');
@@ -225,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
             arrowPath.setAttribute('stroke-linejoin', 'round');
             arrowIcon.appendChild(arrowPath);
             selectedOption.appendChild(arrowIcon);
-
+    
             var selectedIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             selectedIcon.setAttribute('class', 'selected-icon');
             selectedIcon.setAttribute('width', '20');
@@ -239,12 +240,11 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedPath.setAttribute('stroke-linecap', 'round');
             selectedPath.setAttribute('stroke-linejoin', 'round');
             selectedIcon.appendChild(selectedPath);
-            event.target.appendChild(selectedIcon); 
-            lastSelectedIcon = selectedIcon; 
+            listItem.appendChild(selectedIcon);
+            lastSelectedIcon = selectedIcon;
         }
     });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     var selectedOption = document.querySelectorAll('.selected-option')[1];
     var optionsList = document.querySelectorAll('.options-list')[1];
@@ -263,14 +263,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     optionsList.addEventListener('click', function(event) {
-        if (event.target.tagName === 'LI') {
-            var selectedText = event.target.textContent.trim();
+        var listItem = event.target.closest('li'); // Obtain the closest <li> element
+        if (listItem || event.target.tagName === 'STRONG') { // Check if the click is inside a <li> or a <strong> tag
+            if (event.target.tagName === 'STRONG') {
+                listItem = event.target.parentElement; // If <strong> is clicked, get the parent <li> element
+            }
+            var selectedText = listItem.textContent.trim();
             var atIndex = selectedText.indexOf('@');
             var name = selectedText.substring(0, atIndex).trim();
             var rest = selectedText.substring(atIndex);
             selectedOption.innerHTML = `<strong>${name}</strong> &nbsp;${rest}`; 
             selectedOption.classList.add('selected'); 
-            hiddenInput.value = event.target.getAttribute('data-value');
+            hiddenInput.value = listItem.getAttribute('data-value');
             optionsList.style.display = 'none';
 
             if (lastSelectedIcon) {
@@ -305,11 +309,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedPath.setAttribute('stroke-linecap', 'round');
             selectedPath.setAttribute('stroke-linejoin', 'round');
             selectedIcon.appendChild(selectedPath);
-            event.target.appendChild(selectedIcon);
+            listItem.appendChild(selectedIcon);
             lastSelectedIcon = selectedIcon; 
         }
     });
 });
+
 
 // Validation and submisstion of form data with captcha and loading button
 
@@ -318,8 +323,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let formArea = document.querySelector('.form-infos');
     let userSubmitResponse = document.querySelector('.form-success-message');
     let loader = document.querySelector('.loader');
-    let formButton = document.getElementById('form-button');
-
+    let formButton = document.querySelector('.div-button');
+    
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -362,11 +367,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Validate telefone on form 
 
+function formatarTelefone(input) {
+    let phoneNumber = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-// ------------  Next steps ----------
+    // Limita o número de dígitos do telefone para 11
+    if (phoneNumber.length > 11) {
+        phoneNumber = phoneNumber.substring(0, 11);
+    }
 
-// IF + pattern para os digitos
-// Brasil (+55) XX XXXX-XXXX
+    // Formata o número de telefone
+    let formattedPhoneNumber = '(' + phoneNumber.substring(0, 2);
 
-// email 
+    if (phoneNumber.length > 2) {
+        formattedPhoneNumber += ') ' + phoneNumber.substring(2, 7);
+    }
+
+    // Adiciona o hífen se houver mais números
+    if (phoneNumber.length > 7) {
+        formattedPhoneNumber += '-' + phoneNumber.substring(7);
+    }
+
+    // Atualiza o valor do campo de entrada
+    input.value = formattedPhoneNumber;
+}

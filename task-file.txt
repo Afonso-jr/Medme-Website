@@ -3,6 +3,7 @@
   To do list:
 
 --> See how background SVG can be "downsize" to fit Ipad and mobile screen
+--> Verify if background SVG for desktop will continue to be the same (documento, not body)
 
 ------------------------------------ Nav -------------------------------------
 
@@ -10,6 +11,7 @@
 
 --> Add links to html tags
 --> Add link to logo
+--> Ask for Medme logo ( 127w x 40h) with high quality
 
 ------------------------------------ Footer ----------------------------------
 
@@ -48,12 +50,13 @@
 
 --> Verify to "receive" the img with macbook on it
 --> An idea is to have 3 diferrent img for each solution 
+--> See how can we chance de bar color witrh scroll
 
 ------------------------------------ Partners --------------------------------
 
   To do list:
 
---> 
+--> Use same mobile solution for Ipad layout when clients logo dosen't fit on display
 
 ----------------------------------- Testimonial ------------------------------
 
@@ -83,4 +86,4 @@
 
   To do list:
 
---> 
+--> Waiting API to use on form submit data

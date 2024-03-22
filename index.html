@@ -305,8 +305,7 @@
                         Esta é nossa maior proposta de valor para o público
                     </h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipis elit integer non viverra nunc
-                        convallis nisl, sit amet es enim lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipis elit integer non viverra nunc convallis nisl, sit amet es enim lorem ipsum dolor sit amet.
                     </p>
                 </div>
                 <div class="home-buttons">
@@ -319,10 +318,10 @@
                 </div>
             </div>
             <div class="home-img-display">
-                <img src="./assets//img/teste.jpg" alt="Img of something important">
+                <img src="./assets/img/img-home.png" alt="Img of something important">
                 <svg width="818" height="294" viewBox="0 0 818 294" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_b_391_18017)">
-                    <path d="M16 196.476C19.5468 186.102 26.5418 178.346 34.331 169.849C68.2441 132.852 109.092 100.75 155.096 75.6871C251.68 23.0695 367.551 -3.67021 477.228 32.8537C539.924 53.7325 608.711 100.118 618.246 162.679C623.661 198.206 604.298 229.04 576.709 253.888C547.144 280.518 508.9 301.764 467.685 311.06C435.812 318.249 380.348 319.515 376.853 279.974C374.914 258.043 387.466 237.393 402.255 220.694C433.066 185.908 477.785 164.903 525.218 152.618C607.668 131.265 695.702 139.585 767.088 182.741C794.214 199.137 848.993 247.755 868 278.076" stroke="pink" stroke-opacity="0.5" stroke-width="32" stroke-linecap="round"/>
+                    <path d="M16 196.476C19.5468 186.102 26.5418 178.346 34.331 169.849C68.2441 132.852 109.092 100.75 155.096 75.6871C251.68 23.0695 367.551 -3.67021 477.228 32.8537C539.924 53.7325 608.711 100.118 618.246 162.679C623.661 198.206 604.298 229.04 576.709 253.888C547.144 280.518 508.9 301.764 467.685 311.06C435.812 318.249 380.348 319.515 376.853 279.974C374.914 258.043 387.466 237.393 402.255 220.694C433.066 185.908 477.785 164.903 525.218 152.618C607.668 131.265 695.702 139.585 767.088 182.741C794.214 199.137 848.993 247.755 868 278.076" stroke="white" stroke-opacity="0.5" stroke-width="32" stroke-linecap="round"/>
                     </g>
                     <defs>
                     <filter id="filter0_b_391_18017" x="-24.0044" y="-24.0071" width="932.006" height="379.007" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -357,7 +356,7 @@
                 </div>
                 <div class="card">
                     <h1>R$ 10M</h1>
-                    <h5>Lorem ipsum sit</h5>
+                    <h5>Lorem ipsum dolor sit</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipis elit integer.</p>
                 </div>
             </div>
@@ -408,10 +407,10 @@
                         </svg>                                      
                     </a> 
                 </div>                            
-                <img src="./assets/img/teste.jpg" alt="Imagem de soluções Corporativas">
+                <img src="./assets/img/img-about-corporativas.png" alt="Imagem de soluções Corporativas">
             </div>    
             <div class="about-solutions">  
-                <img src="./assets/img/teste.jpg" alt="Imagem de soluções Individuais e família">
+                <img src="./assets/img/img-about-parceiros.png" alt="Imagem de soluções Individuais e família">
                 <div class="about-infos">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="#E5F4FE"/>
@@ -488,7 +487,7 @@
                         </svg>                                      
                     </a> 
                 </div>                            
-                <img src="./assets/img/teste.jpg" alt="Imagem de soluções para Parceiros">
+                <img src="./assets/img/img-about-corporativas.png" alt="Imagem de soluções para Parceiros">
             </div>    
         </div>
     </section>
@@ -824,9 +823,8 @@
                     </div>
                     <div class="form-divs">
                         <span for="iprofile" class="form-label">Em qual perfil você se encaixa?</span>
-                        <input type="hidden" name="profile" id="iprofile" required>
                         <div class="custom-select">
-                            <div class="selected-option" required>
+                            <div class="selected-option" required tabindex="0">
                                 Selecione nesta lista...
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -841,12 +839,13 @@
                                 <li data-value="Natali Craig @natali"><strong>Natali Craig</strong>&nbsp@natali</li>
                                 <li data-value="Drew Cano @drew"><strong>Drew Cano</strong>&nbsp@drew</li>                              
                             </ul>
+                            <input type="hidden" name="profile" id="iprofile" required>
                         </div>
                     </div>
                     <div class="form-divs">
-                        <span class="form-label">Sobre o que deseja tratar?</span>
+                        <span for="isubject" class="form-label">Sobre o que deseja tratar?</span>
                         <div class="custom-select">
-                            <div class="selected-option" required>
+                            <div class="selected-option" tabindex="0" required>
                                 Selecione nesta lista...
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -867,17 +866,17 @@
                     <div class="form-divs">
                         <label for="iemail" class="form-label">Email</label>
                         <input type="email" id="iemail" name="email" class="form-input" placeholder="joaosilva@email.com.br" autocomplete="new-password" required>
-                    </div>
+                    </div>   
                     <div class="form-divs">
                         <label for="iphone" class="form-label" autocomplete="off">Telefone</label>
-                        <input type="tel" id="iphone" name="phone" required class="form-input" autocomplete="off">
-                    </div>
+                        <input type="tel" id="iphone" name="phone" required class="form-input" autocomplete="off" oninput="formatarTelefone(this)" placeholder="(XX) XXXXX-XXXX">
+                    </div>                                    
                     <div class="form-divs">
                         <input type="checkbox" id="iprivacy-policy" name="privacy-policy" class="form-input" required>
                         <label for="iprivacy-policy" class="form-label">Concordo com a <a href="#">política de privacidade</a>.</label>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcChZcpAAAAALzk1ReYK-R8EgPl6vJqXIBexZ-U"></div>
-                    <div class="form-divs">
+                    <div id="recaptcha-container" class="g-recaptcha" data-sitekey="6LcChZcpAAAAALzk1ReYK-R8EgPl6vJqXIBexZ-U"></div>
+                        <div class="form-divs div-button">
                         <button id="form-button" type="submit" class="">Falar com um consultor</button>
                     </div>
                     <span class="loader"></span>
@@ -920,12 +919,12 @@
                             <a href="#" class="footer-link">Sobre nós</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Contact</a>
+                            <a href="#" class="footer-link">Contato</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer-list">
-                    <h3>Merketplaces</h3>
+                    <h3>Marketplace</h3>
                     <ul>
                         <li>
                             <a href="#" class="footer-link">MedMe Farma</a>
