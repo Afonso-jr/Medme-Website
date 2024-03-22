@@ -176,3 +176,219 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// System for both selections of options on Form section
+
+document.addEventListener('DOMContentLoaded', function() {
+    var selectedOption = document.querySelector('.selected-option');
+    var optionsList = document.querySelector('.options-list');
+    var hiddenInput = document.getElementById('iprofile');
+    var lastSelectedIcon = null;
+
+    selectedOption.addEventListener('click', function() {
+        optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        var isClickInside = selectedOption.contains(event.target) || optionsList.contains(event.target);
+        if (!isClickInside) {
+            optionsList.style.display = 'none';
+        }
+    });
+
+    optionsList.addEventListener('click', function(event) {
+        var listItem = event.target.closest('li');
+        if (listItem) {
+            var selectedText = listItem.textContent.trim();
+            var atIndex = selectedText.indexOf('@');
+            var name = selectedText.substring(0, atIndex).trim();
+            var rest = selectedText.substring(atIndex);
+            selectedOption.innerHTML = `<strong>${name}</strong> &nbsp;${rest}`;
+            selectedOption.classList.add('selected');
+            hiddenInput.value = listItem.getAttribute('data-value');
+            optionsList.style.display = 'none';
+    
+            if (lastSelectedIcon) {
+                lastSelectedIcon.remove();
+            }
+    
+            var arrowIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            arrowIcon.setAttribute('class', 'arrow-icon');
+            arrowIcon.setAttribute('width', '20');
+            arrowIcon.setAttribute('height', '20');
+            arrowIcon.setAttribute('viewBox', '0 0 20 20');
+            arrowIcon.setAttribute('fill', 'none');
+            var arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            arrowPath.setAttribute('d', 'M5 7.5L10 12.5L15 7.5');
+            arrowPath.setAttribute('stroke', '#667085');
+            arrowPath.setAttribute('stroke-width', '1.66667');
+            arrowPath.setAttribute('stroke-linecap', 'round');
+            arrowPath.setAttribute('stroke-linejoin', 'round');
+            arrowIcon.appendChild(arrowPath);
+            selectedOption.appendChild(arrowIcon);
+    
+            var selectedIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            selectedIcon.setAttribute('class', 'selected-icon');
+            selectedIcon.setAttribute('width', '20');
+            selectedIcon.setAttribute('height', '20');
+            selectedIcon.setAttribute('viewBox', '0 0 20 20');
+            selectedIcon.setAttribute('fill', 'none');
+            var selectedPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            selectedPath.setAttribute('d', 'M16.6668 5L7.50016 14.1667L3.3335 10');
+            selectedPath.setAttribute('stroke', '#2996CC');
+            selectedPath.setAttribute('stroke-width', '1.66667');
+            selectedPath.setAttribute('stroke-linecap', 'round');
+            selectedPath.setAttribute('stroke-linejoin', 'round');
+            selectedIcon.appendChild(selectedPath);
+            listItem.appendChild(selectedIcon);
+            lastSelectedIcon = selectedIcon;
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var selectedOption = document.querySelectorAll('.selected-option')[1];
+    var optionsList = document.querySelectorAll('.options-list')[1];
+    var hiddenInput = document.getElementById('isubject');
+    var lastSelectedIcon = null;
+
+    selectedOption.addEventListener('click', function() {
+        optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        var isClickInside = selectedOption.contains(event.target) || optionsList.contains(event.target);
+        if (!isClickInside) {
+            optionsList.style.display = 'none';
+        }
+    });
+
+    optionsList.addEventListener('click', function(event) {
+        var listItem = event.target.closest('li'); // Obtain the closest <li> element
+        if (listItem || event.target.tagName === 'STRONG') { // Check if the click is inside a <li> or a <strong> tag
+            if (event.target.tagName === 'STRONG') {
+                listItem = event.target.parentElement; // If <strong> is clicked, get the parent <li> element
+            }
+            var selectedText = listItem.textContent.trim();
+            var atIndex = selectedText.indexOf('@');
+            var name = selectedText.substring(0, atIndex).trim();
+            var rest = selectedText.substring(atIndex);
+            selectedOption.innerHTML = `<strong>${name}</strong> &nbsp;${rest}`; 
+            selectedOption.classList.add('selected'); 
+            hiddenInput.value = listItem.getAttribute('data-value');
+            optionsList.style.display = 'none';
+
+            if (lastSelectedIcon) {
+                lastSelectedIcon.remove();
+            }
+
+            var arrowIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            arrowIcon.setAttribute('class', 'arrow-icon');
+            arrowIcon.setAttribute('width', '20');
+            arrowIcon.setAttribute('height', '20');
+            arrowIcon.setAttribute('viewBox', '0 0 20 20');
+            arrowIcon.setAttribute('fill', 'none');
+            var arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            arrowPath.setAttribute('d', 'M5 7.5L10 12.5L15 7.5');
+            arrowPath.setAttribute('stroke', '#667085');
+            arrowPath.setAttribute('stroke-width', '1.66667');
+            arrowPath.setAttribute('stroke-linecap', 'round');
+            arrowPath.setAttribute('stroke-linejoin', 'round');
+            arrowIcon.appendChild(arrowPath);
+            selectedOption.appendChild(arrowIcon);
+
+            var selectedIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            selectedIcon.setAttribute('class', 'selected-icon');
+            selectedIcon.setAttribute('width', '20');
+            selectedIcon.setAttribute('height', '20');
+            selectedIcon.setAttribute('viewBox', '0 0 20 20');
+            selectedIcon.setAttribute('fill', 'none');
+            var selectedPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            selectedPath.setAttribute('d', 'M16.6668 5L7.50016 14.1667L3.3335 10');
+            selectedPath.setAttribute('stroke', '#2996CC');
+            selectedPath.setAttribute('stroke-width', '1.66667');
+            selectedPath.setAttribute('stroke-linecap', 'round');
+            selectedPath.setAttribute('stroke-linejoin', 'round');
+            selectedIcon.appendChild(selectedPath);
+            listItem.appendChild(selectedIcon);
+            lastSelectedIcon = selectedIcon; 
+        }
+    });
+});
+
+
+// Validation and submisstion of form data with captcha and loading button
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    let formArea = document.querySelector('.form-infos');
+    let userSubmitResponse = document.querySelector('.form-success-message');
+    let loader = document.querySelector('.loader');
+    let formButton = document.querySelector('.div-button');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (grecaptcha.getResponse() === '') {
+            alert('Por favor, preencha o reCAPTCHA.');
+            return;
+        }
+
+        loader.style.display = 'inline-block';
+        formButton.style.display = 'none';
+
+        $.ajax({
+            url: "https://formsubmit.co/ajax/afonso@medmesaude.com.br",
+            method: "POST",
+            dataType: "json",
+            data: {
+                name: $('#iname').val(),
+                surname: $('#isurname').val(),
+                profile: $('#iprofile').val(),
+                subject: $('#isubject').val(),
+                email: $('#iemail').val(),
+                phone: $('#iphone').val(),
+                privacyPolicy: $('#iprivacy-policy').val(),
+                // 'g-recaptcha-response': grecaptcha.getResponse()
+            }
+        })
+        .done((response) => {
+            console.log(response)
+            formArea.style.display = 'none';
+            userSubmitResponse.classList.add('show');
+        })
+        .fail(function (response) {
+            console.log(response.responseText);
+            location.reload();
+        })
+        .always(function() {
+            loader.style.display = 'none';
+            formButton.style.display = 'inline-block';
+        });
+    });
+});
+
+// Validate telefone on form 
+
+function formatarTelefone(input) {
+    let phoneNumber = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    // Limita o número de dígitos do telefone para 11
+    if (phoneNumber.length > 11) {
+        phoneNumber = phoneNumber.substring(0, 11);
+    }
+
+    // Formata o número de telefone
+    let formattedPhoneNumber = '(' + phoneNumber.substring(0, 2);
+
+    if (phoneNumber.length > 2) {
+        formattedPhoneNumber += ') ' + phoneNumber.substring(2, 7);
+    }
+
+    // Adiciona o hífen se houver mais números
+    if (phoneNumber.length > 7) {
+        formattedPhoneNumber += '-' + phoneNumber.substring(7);
+    }
+
+    // Atualiza o valor do campo de entrada
+    input.value = formattedPhoneNumber;
+}
