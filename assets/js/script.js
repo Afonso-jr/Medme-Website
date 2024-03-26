@@ -263,10 +263,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     optionsList.addEventListener('click', function(event) {
-        var listItem = event.target.closest('li'); // Obtain the closest <li> element
-        if (listItem || event.target.tagName === 'STRONG') { // Check if the click is inside a <li> or a <strong> tag
+        var listItem = event.target.closest('li');
+        if (listItem || event.target.tagName === 'STRONG') {
             if (event.target.tagName === 'STRONG') {
-                listItem = event.target.parentElement; // If <strong> is clicked, get the parent <li> element
+                listItem = event.target.parentElement;
             }
             var selectedText = listItem.textContent.trim();
             var atIndex = selectedText.indexOf('@');
@@ -370,25 +370,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // Validate telefone on form 
 
 function formatarTelefone(input) {
-    let phoneNumber = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    let phoneNumber = input.value.replace(/\D/g, '');
 
-    // Limita o número de dígitos do telefone para 11
     if (phoneNumber.length > 11) {
         phoneNumber = phoneNumber.substring(0, 11);
     }
 
-    // Formata o número de telefone
     let formattedPhoneNumber = '(' + phoneNumber.substring(0, 2);
 
     if (phoneNumber.length > 2) {
         formattedPhoneNumber += ') ' + phoneNumber.substring(2, 7);
     }
 
-    // Adiciona o hífen se houver mais números
     if (phoneNumber.length > 7) {
         formattedPhoneNumber += '-' + phoneNumber.substring(7);
     }
 
-    // Atualiza o valor do campo de entrada
     input.value = formattedPhoneNumber;
 }
