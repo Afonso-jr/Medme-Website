@@ -1070,6 +1070,11 @@ div.features-selected {
     transition: max-height 1s ease-in;         
 }
 
+.answer a {
+    color: var(--webpage-p-color);
+    font-weight: 500;
+}
+
 .fac-question {
     display: flex;
     flex-direction: row;
