@@ -527,8 +527,8 @@ li {
 .card h1 {
     margin-bottom: 2rem;
     font-weight: 600;
-    line-height: 7.2rem;
-    font-size: 6rem;
+    line-height: 6.2rem;
+    font-size: 5.5rem;
 }
 
 .card h5 {
@@ -1746,8 +1746,8 @@ footer .wrapper {
     
     div.card h1 {
         margin-bottom: 1.5rem;
-        line-height: 6rem;
-        font-size: 5rem;
+        line-height: 5rem;
+        font-size: 3.5rem;
     }
 
     div.card h5 {
