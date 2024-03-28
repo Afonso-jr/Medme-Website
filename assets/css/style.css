@@ -1017,7 +1017,7 @@ div.features-selected {
 #fac .wrapper {
     display: flex;
     flex-direction: column;
-    padding: 6.4rem 6.4rem;
+    padding: 8rem 6.4rem 6.4rem 6.4rem;
 }
 
 .fac-title h1 {
@@ -1935,7 +1935,7 @@ footer .wrapper {
     }
 
     .partners-imgs img {
-        padding-inline: 2rem;
+        padding-inline: 1.5rem;
     }
     
     /* ============== Testimonial ============== */
@@ -2044,6 +2044,8 @@ footer .wrapper {
     }
     
     .cta-with-img-buttons button {
+        padding: 0;
+        margin: 0;
         padding: 0.7rem 1.3rem;
         line-height: 1.5rem;
         font-size: 1rem;
