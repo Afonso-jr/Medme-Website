@@ -783,9 +783,14 @@ div.features-selected {
 }
 
 .features-solutions img {
+    display: none;
     width: 100%;
     height: 100%;
     object-fit: scale-down;
+}
+
+img.img-selected {
+    display: initial;
 }
 
 /* ========================================== Partners =========================================== */
@@ -804,15 +809,61 @@ div.features-selected {
     color: var(--webpage-p-color);
 }
 
-.partners-imgs {
+.partners-imgs-odd,
+.partners-imgs-even {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.slider-mobile {
-    display: none;
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }   
+
+    to {
+        transform: translateX(-100%);
+    }     
 }
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }   
+
+    to {
+        transform: translateX(-100%);
+    }     
+}
+
+.slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.slider:hover .partners-imgs-odd,
+.slider:hover .partners-imgs-even {
+    animation-play-state: paused;
+}
+
+.partners-imgs-odd {
+    display: inline-block;
+    animation: 35s slideLeft infinite linear;
+} 
+
+.partners-imgs-odd img,
+.partners-imgs-even img {
+    height: 50px;
+    width: 200px;
+    margin: 0 40px;
+}
+
+.partners-imgs-even {
+    display: inline-block;
+    animation: 35s slideRight infinite linear;
+    margin-block: 20px;
+} 
 
 /* ========================================= Testimonial ========================================= */
 

@@ -138,18 +138,72 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Change border color of select element on Features
+// Change border color of select element on Features and its igms
 
 document.addEventListener('DOMContentLoaded', function() {
     const featureInfos = document.querySelectorAll('.features-info');
-    featureInfos.forEach(function(info) {
+    const featureImages = document.querySelectorAll('.features-solutions img');
+
+    function changeImageOnScroll() {
+        const windowHeight = window.innerHeight;
+        featureInfos.forEach(function(info, index) {
+            const rect = info.getBoundingClientRect();
+            if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+                featureInfos.forEach(function(otherInfo) {
+                    otherInfo.classList.remove('features-selected');
+                });
+
+                info.classList.add('features-selected');
+
+                featureImages.forEach(function(image) {
+                    image.classList.remove('img-selected');
+                });
+
+                featureImages[index].classList.add('img-selected');
+            }
+        });
+    }
+
+    changeImageOnScroll();
+
+    document.addEventListener('scroll', throttle(changeImageOnScroll, 500));
+
+    featureInfos.forEach(function(info, index) {
         info.addEventListener('click', function() {
             featureInfos.forEach(function(otherInfo) {
                 otherInfo.classList.remove('features-selected');
             });
+
             this.classList.add('features-selected');
+
+            featureImages.forEach(function(image) {
+                image.classList.remove('img-selected');
+            });
+
+            featureImages[index].classList.add('img-selected');
         });
     });
+
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
 });
 
 // Open and close answer question
@@ -388,3 +442,21 @@ function formatarTelefone(input) {
 
     input.value = formattedPhoneNumber;
 }
+
+// Slider section for Even and Odd row
+
+var partnersOdd = document.querySelectorAll(".partners-imgs-odd");
+
+partnersOdd.forEach(function(partnersImgs) {
+    var copy = partnersImgs.cloneNode(true);
+    var slider = partnersImgs.closest(".slider");
+    slider.insertBefore(copy, partnersImgs.nextSibling);
+});
+
+var partnersEven = document.querySelectorAll(".partners-imgs-even");
+
+partnersEven.forEach(function(partnersImgs) {
+    var copy = partnersImgs.cloneNode(true);
+    var slider = partnersImgs.closest(".slider");
+    slider.insertBefore(copy, partnersImgs.nextSibling);
+});
