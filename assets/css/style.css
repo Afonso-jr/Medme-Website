@@ -842,26 +842,20 @@ img.img-selected {
     position: relative;
 }
 
-.slider:hover .partners-imgs-odd,
-.slider:hover .partners-imgs-even {
-    animation-play-state: paused;
-}
-
 .partners-imgs-odd {
     display: inline-block;
-    animation: 35s slideLeft infinite linear;
+    animation: 40s slideLeft infinite linear;
 } 
 
 .partners-imgs-odd img,
 .partners-imgs-even img {
     height: 50px;
-    width: 200px;
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 .partners-imgs-even {
     display: inline-block;
-    animation: 35s slideRight infinite linear;
+    animation: 40s slideRight infinite linear;
     margin-block: 20px;
 } 
 
