@@ -445,18 +445,11 @@ function formatarTelefone(input) {
 
 // Slider section for Even and Odd row
 
-var partnersOdd = document.querySelectorAll(".partners-imgs-odd");
+var partnersImg = document.querySelectorAll(".partners-imgs-odd");
 
-partnersOdd.forEach(function(partnersImgs) {
+partnersImg.forEach(function(partnersImgs) {
     var copy = partnersImgs.cloneNode(true);
     var slider = partnersImgs.closest(".slider");
     slider.insertBefore(copy, partnersImgs.nextSibling);
-});
-
-var partnersEven = document.querySelectorAll(".partners-imgs-even");
-
-partnersEven.forEach(function(partnersImgs) {
-    var copy = partnersImgs.cloneNode(true);
-    var slider = partnersImgs.closest(".slider");
-    slider.insertBefore(copy, partnersImgs.nextSibling);
-});
+}
+);

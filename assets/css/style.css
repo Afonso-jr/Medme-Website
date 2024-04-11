@@ -809,8 +809,8 @@ img.img-selected {
     color: var(--webpage-p-color);
 }
 
-.partners-imgs-odd,
-.partners-imgs-even {
+.partners-imgs,
+.partners-imgs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -842,22 +842,15 @@ img.img-selected {
     position: relative;
 }
 
-.partners-imgs-odd {
+.partners-imgs{
     display: inline-block;
-    animation: 40s slideLeft infinite linear;
+    animation: 35s slideLeft infinite linear;
 } 
 
-.partners-imgs-odd img,
-.partners-imgs-even img {
+.partners-imgs {
     height: 50px;
     margin: 0 20px;
 }
-
-.partners-imgs-even {
-    display: inline-block;
-    animation: 40s slideRight infinite linear;
-    margin-block: 20px;
-} 
 
 /* ========================================= Testimonial ========================================= */
 
